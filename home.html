@@ -61,10 +61,11 @@
     <div class="container pt-5" id="cards">
         <div class="row d-flex justify-content-center">
             <div class="position-relative d-flex justify-content-center">
-                <img src="C:\Users\Hoang\UCI\spookathon\images\Annabelle1.jpg" class="card-img"
+                <img src="C:\Users\Hoang\UCI\spookathon\images\Annabelle1.jpg" class="card-img" id="image"
                     style="object-fit: cover; object-position: top center; border-radius: 20px; width: 18rem; height: 22rem; border-radius: 20px; border: 1px solid #221E22; border-radius: 20px;">
                 <div class="position-absolute bottom-0 pr-5 pb-3 text-white"
-                    style="font-size: 2rem; font-family: Jolly Lodger; text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);">
+                    style="font-size: 2rem; font-family: Jolly Lodger; text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);"
+                    id="name">
                     Annabelle</div>
             </div>
         </div>
@@ -81,6 +82,45 @@
                 style="font-size: 1.5rem; font-family: 'Jolly Lodger'; background-color: #EE5622; border: 1px solid #221E22; border-radius: 20px;">SMASH</button>
         </div>
     </div>
+
+
+    <script>
+        let i = 0;
+
+        document.getElementById('pass').addEventListener('click', function () {
+            const result = pressPass(i);
+            if (result !== null) {
+                const image = document.getElementById("image");
+                const name = document.getElementById("name");
+                image.src = result[0].ImagePath;
+                name.textContent = result[0].Name;
+                i += 1;
+            }
+
+            if (i == 29) {
+                const filePath = 'results.html';
+                window.open(filePath, '_blank');
+            }
+        });
+    </script>
+
+    <script>
+        document.getElementById('smash').addEventListener('click', function () {
+            const result = pressSmash(i);
+            if (result !== null) {
+                const image = document.getElementById("image");
+                const name = document.getElementById("name");
+                image.src = result[0].ImagePath;
+                name.textContent = result[0].Name;
+                i += 1;
+            }
+
+            if (i == 29) {
+                const filePath = 'results.html';
+                window.open(filePath, '_blank');
+            }
+        });
+    </script>
 
 </body>
 
