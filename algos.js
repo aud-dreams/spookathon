@@ -173,6 +173,12 @@ const characters = [
         "Traits": "cursed, deceptive, unconventionally attractive",
         "ImagePath": "images/Vecna1.jpg",
         "Count": "0, 0, 0"
+    },
+    {
+        "Name": "Vecna",
+        "Traits": "cursed, deceptive, unconventionally attractive",
+        "ImagePath": "images/Vecna1.jpg",
+        "Count": "0, 0, 0"
     }
 ]
 
