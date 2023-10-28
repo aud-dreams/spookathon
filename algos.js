@@ -93,7 +93,7 @@ const characters = [
     {
         "Name": "Michael Myers",
         "Traits": "faceless, silent, violent",
-        "ImagePath": "images/MichaelMyers1.jpg",
+        "ImagePath": "images/MIchaelMyers1.jpg",
         "Count": "0, 0, 0"
     },
     {
